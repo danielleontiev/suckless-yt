@@ -1,0 +1,5 @@
+#!/bin/bash
+
+choice=$(cat $HOME/.cache/suckless-yt/channels-names.txt | dmenu -i -l 30)
+[ -z "$choice" ] && exit 1
+pr -m -t -s';' $HOME/.cache/suckless-yt/channels-names.txt $HOME/.config/suckless-yt/channels.txt | grep "$choice" | awk -F';' '{print $2}'
