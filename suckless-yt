@@ -1,5 +1,10 @@
 #!/bin/bash
 
-choice=$(cat $HOME/.cache/suckless-yt/channels-names.txt | dmenu -i -l 30)
-[ -z "$choice" ] && exit 1
-pr -m -t -s';' $HOME/.cache/suckless-yt/channels-names.txt $HOME/.config/suckless-yt/channels.txt | grep "$choice" | awk -F';' '{print $2"/videos"}'
+names=$(cat $HOME/.cache/suckless-yt/channels-names.txt | dmenu -i -l 30)
+[ -z "$names" ] && exit 1
+ch_url=$(pr -m -t -s';' $HOME/.cache/suckless-yt/channels-names.txt $HOME/.config/suckless-yt/channels.txt | grep "$names" | awk -F';' '{print $2"/videos"}')
+list-videos.sh $ch_url
+video=$(cat $HOME/.cache/suckless-yt/videos-titles.txt | dmenu -l 30)
+[ -z "$video" ] && suckless-yt
+[ -z "$video" ] && exit 1
+pr -m -t -s';' $HOME/.cache/suckless-yt/videos-titles.txt $HOME/.cache/suckless-yt/videos-hrefs.txt | grep "$video" | awk -F';' '{print $2}' | xargs mpv
