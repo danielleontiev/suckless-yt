@@ -3,6 +3,7 @@ Suckless youtube player based on `dmenu` and `mpv`.
 It's only provides the ability to watch last videos from channels you like.
 
 # Demo
+![](demo.gif)
 
 # Deps
 - [`mpv`](https://mpv.io/)
