@@ -25,6 +25,8 @@ You can also automate this process by giving `subscription_manager` file to `get
 get-channels-from-subsctiption-file.sh <path to subscription_manager file> > ~/.config/suckless-yt/channels.txt
 ```
 
+**Please run `update-channels.sh` after every change to config file!**
+
 To get `subscription_manager` file login on YouTube with your account and follow [this link](https://youtube.com/subscription_manager?action_takeout=1).
 
 # Uninstall
