@@ -3,7 +3,7 @@ install:
 	mkdir -p ${HOME}/.cache/suckless-yt
 	touch ${HOME}/.config/suckless-yt/channels.txt
 	mkdir -p ${HOME}/bin
-	cp list-videos.sh suckless-yt update-channels.sh ${HOME}/bin
+	cp list-videos.sh suckless-yt update-channels.sh last-videos.sh ${HOME}/bin
 
 uninstall:
 	rm -rf ${HOME}/.config/suckless-yt
@@ -11,4 +11,5 @@ uninstall:
 	rm -f ${HOME}/bin/list-videos.sh
 	rm -f ${HOME}/bin/suckless-yt
 	rm -f ${HOME}/bin/update-channels.sh
+	rm -f ${HOME}/bin/last-videos.sh
 
