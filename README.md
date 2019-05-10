@@ -30,5 +30,8 @@ get-channels-from-subsctiption-file.sh <path to subscription_manager file> > ~/.
 
 To get `subscription_manager` file login on YouTube with your account and follow [this link](https://youtube.com/subscription_manager?action_takeout=1).
 
+### Using
+run `suckless-yt` to choose videos from your channels or `last-videos.sh` to choose from latest videos from each of your channels
+
 ### Uninstall
 run `make uninstall`
