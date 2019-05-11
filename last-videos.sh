@@ -12,4 +12,4 @@ done < $HOME/.config/suckless-yt/channels.txt
 
 last=$(cat $HOME/.cache/suckless-yt/last-videos-titles.txt | dmenu -i -l 30)
 [ -z "$last" ] && exit 1
-pr -m -t -s';' $HOME/.cache/suckless-yt/last-videos-titles.txt $HOME/.cache/suckless-yt/last-videos-hrefs.txt | grep "$last" | awk -F';' '{print $2}' | xargs mpv
+pr -m -t -s'{sep}' $HOME/.cache/suckless-yt/last-videos-titles.txt $HOME/.cache/suckless-yt/last-videos-hrefs.txt | grep "$last" | awk -F'{sep}' '{print $2}' | xargs mpv
